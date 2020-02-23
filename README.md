@@ -1,24 +1,56 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリ内容
 
-Things you may want to cover:
+プロスポーツ選手なりたい方に特化したQ＆Aアプリ
 
-* Ruby version
+## 本番環境
 
-* System dependencies
+URL：
 
-* Configuration
+## 機能一覧
 
-* Database creation
+- ユーザー登録・ログイン機能（deviseを使用）
+- 質問投稿機能（画像アップロードCarrierWave）
+- 投稿管理機能
+- プロフィール画像アップロード、削除機能
+- フォロー、フォロワー機能（Ajax）
+- いいね機能（Ajax）
+- コメント機能（Ajax）
+- ページネーション機能
+- 検索機能（Ransack）
+- 管理者機能
+- CircleCIを用いたCI/CD機能
+- Rspecによる自動テスト機能
+- レスポンシブデザイン
 
-* Database initialization
+## 使用技術
+- ruby 2.7.0
+- Ruby on Rails 6.0.2.1
+- MYSQL 8？
+- SASS
+- Bootstrap
+- GitHub,Git
 
-* How to run the test suite
+- 下記予定　ーーーーーー
+- Rspec
+- Docker
+- docker-compose
+- CircleCI
+- AWS
+  - VPC
+  - EC2
+  - RDS
+  - ECR/ECS
+  - S3
+  - CloudFront
+  - Route53
+  - ACM
+  - CloudWatch
 
-* Services (job queues, cache servers, search engines, etc.)
+## テスト
+- Rspec
+  - 統合テスト（systemspec）
+  - 単体テスト（モデル）
 
-* Deployment instructions
-
-* ...
+## AWSアーキテクチャ図
