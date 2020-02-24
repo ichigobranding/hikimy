@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+// clean-blog.css
+a.btn.btn-primary.btn-origin.float-right{
+  background-color: #305588;
+  border-color: #305588;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #fff;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+.post-preview > a:focus, .post-preview > a:hover {
+  color:  #dc3545 !important;
+}
+.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
+  color:  #dc3545 !important;
+}

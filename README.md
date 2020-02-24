@@ -27,7 +27,7 @@ URL：
 ## 使用技術
 - ruby 2.7.0
 - Ruby on Rails 6.0.2.1
-- MYSQL 8？
+- MYSQL  Ver 8.0.19
 - SASS
 - Bootstrap
 - GitHub,Git
