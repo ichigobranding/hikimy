@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <%= link_to("Q&A","/qa", class: "nav-link") %>
+            <%= link_to("質問する","/posts/new", class: "nav-link") %>
           </li>
           <li class="nav-item">
             <%= link_to("Home","/", class: "nav-link") %>
@@ -47,6 +47,39 @@
       </div>
     </div>
   </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background: image-url('/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mx-auto">
+          <div class="site-heading">
+            <span class="subheading">アスリート特化型Q&Aアプリ
+            </span>
+            <h1>BATON</h1>
+             <span class="subheading">
+              価値のある経験を引き出そう！
+             </span>
+             <span class="subheading">
+             成功の近道は知ること
+             </span>
+             <span class="subheading">
+             - Connecting The Dots -
+             </span>
+             <span class="subheading">
+             - For NEXT ATHLETE -
+             </span>
+          </div>
+      </div>
+      <div class="col-lg-6 col-md-6 mx-auto">
+          <div class="site-heading">
+            <span class="subheading">ログイン</span>
+          </div>
+      </div>
+    </div>
+    </div>
+  </header>
 
     <%= yield %>
 

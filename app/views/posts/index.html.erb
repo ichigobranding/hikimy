@@ -1,0 +1,36 @@
+<%
+  posts = [
+    "プロになる近道はありますか？",
+    "早く上手くなりたいのですがどうしたらいいですか"
+    ]
+%>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <% @posts.each do |post| %>
+          <div class="post-preview">
+              <h2 class="post-title">
+                <%= link_to(post.content, "/posts/#{post.id}") %>
+              </h2>
+              <h3 class="post-subtitle">
+                 中身テキストテキストテキストテキストテキストテキスト...
+              </h3>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 24, 2019</p>
+          </div>
+          <hr>
+        <% end %>
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary btn-origin float-right" href="#">NEXT &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
