@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-    <title>スポーツ選手特化型Q&Aアプリ|BATON</title>
+    <title>スポーツに関わる働き方特化型Q&Aアプリ|BATON</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -41,8 +41,12 @@
             <%= link_to("About", "/about", class: "nav-link") %>
           </li>
           <li class="nav-item">
-            <%= link_to("login", "/login", class: "nav-link") %>
+            <%= link_to("ユーザー一覧", "/users", class: "nav-link") %>
           </li>
+          <li class="nav-item">
+            <%= link_to("新規登録", "/signup", class: "nav-link") %>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -55,14 +59,14 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 mx-auto">
           <div class="site-heading">
-            <span class="subheading">スポーツ選手特化型Q&Aアプリ
+            <span class="subheading">スポーツに関わる働き方特化型Q&A
             </span>
             <h1>BATON</h1>
              <span class="subheading">
-              価値のある経験を引き出そう！
+              働き方・生き方を見つけ自立する！
              </span>
              <span class="subheading">
-             成功の近道は知ること
+             先輩の知恵を借りよう！
              </span>
              <span class="subheading">
              - Connecting The Dots -
@@ -84,12 +88,13 @@
   <div class="container category">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto category">
-         <a class="btn btn-primary btn-origin" href="#">スポサー契約</a>
-         <a class="btn btn-primary btn-origin" href="#">ビジネス</a>
-         <a class="btn btn-primary btn-origin" href="#">サポート</a>
-         <a class="btn btn-primary btn-origin" href="#">物品支給</a>
+         <a class="btn btn-primary btn-origin" href="#">プロ</a>
+         <a class="btn btn-primary btn-origin" href="#">スポンサー</a>
+         <a class="btn btn-primary btn-origin" href="#">ビジネス・独立・企業</a>
+         <a class="btn btn-primary btn-origin" href="#">プロデュース</a>
          <a class="btn btn-primary btn-origin" href="#">引退</a>
          <a class="btn btn-primary btn-origin" href="#">セカンドキャリア</a>
+         <a class="btn btn-primary btn-origin" href="#">副業</a>
       </div>
     </div>
   </div>
@@ -106,7 +111,14 @@
     </div>
   </div>
 
-    <%= yield %>
+<!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
     <footer>
@@ -139,7 +151,6 @@
                 </a>
               </li>
             </ul>
-
 
             <p class="copyright text-muted">Copyright &copy; プロアスリート特化型Q&Aアプリ</p>
           </div>

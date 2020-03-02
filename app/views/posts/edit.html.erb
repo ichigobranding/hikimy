@@ -1,32 +1,21 @@
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+<%= form_tag("/posts/#{@post.id}/update") do %>
 
-      <%= form_tag("/posts/#{@post.id}/update") do %>
+<% @post.errors.full_messages.each do |message| %>
 
-        <% @post.errors.full_messages.each do |message| %>
+<div class="error-mess">
+  <%= message %>
+</div>
 
-              <div class="error-mess">
-                <%= message %>
-              </div>
+<% end %>
 
-           <% end %>
+<textarea name="content"><%= @post.content %></textarea>
 
-       <textarea name="content"><%= @post.content %></textarea>
+<input type="submit" value="保存">
 
-          <input type="submit" value="保存">
+<% end %>
 
-          <% end %>
+<hr>
 
-        <hr>
+<%= link_to("質問一覧へ戻る","/", class: "nav-link") %>
 
-      <%= link_to("質問一覧へ戻る","/", class: "nav-link") %>
-
-        <!-- Pager -->
-
-      </div>
-    </div>
-  </div>
-
-  <hr>
+<hr>

@@ -28,9 +28,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(content: params[:content])
-    @post.save
+    if @post.save
     flash[:notice] = "質問が投稿されました。回答者にわかりやすい質問にするとよりよい回答がえ得られます！"
     redirect_to("/posts")
+    else
+    render("posts/new")
+    end
   end
 
   def destroy

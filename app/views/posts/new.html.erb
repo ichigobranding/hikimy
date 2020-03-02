@@ -1,21 +1,12 @@
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-       <%= form_tag("/posts/create") do %>
+<%= form_tag("/posts/create") do %>
 
-       <textarea name = "content"></textarea>
+<textarea name = "content"></textarea>
 
-          <input type="submit" value="投稿">
+<input type="submit" value="投稿">
 
-          <% end %>
+<% end %>
 
-        <hr>
-      <%= link_to("質問一覧へ戻る","/", class: "nav-link") %>
-        <!-- Pager -->
+<hr>
+<%= link_to("質問一覧へ戻る","/", class: "nav-link") %>
 
-      </div>
-    </div>
-  </div>
-
-  <hr>
+<hr>

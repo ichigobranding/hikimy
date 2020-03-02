@@ -29,5 +29,8 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+ja:
+  post:
+    attributes:
+        Content: 入力
+        content: 入力

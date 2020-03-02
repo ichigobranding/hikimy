@@ -1,8 +1,10 @@
-<% @posts.each do |post| %>
+テスト
+
+<% @users.each do |user| %>
   <div class="post-preview">
       <h2 class="post-title">
         <a class="btn btn-primary btn-origin" href="#">スポンサー契約</a>
-        <%= link_to(post.content, "/posts/#{post.id}") %>
+        <%= link_to(users.name, "/users/#{user.id}") %>
       </h2>
       <h3 class="post-subtitle">
          <a class="btn btn-primary btn-origin" href="#">解決</a>中身テキストテキストテキストテキストテキストテキスト...

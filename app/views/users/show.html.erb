@@ -1,0 +1,15 @@
+テスト show
+
+<% @users.each do |user| %>
+  <div class="post-preview">
+      <h2 class="post-title">
+        <%= @user.name %>
+      </h2>
+    <p><%= @user.email %></a>
+  </div>
+  <hr>
+<% end %>
+
+<%= link_to("編集", "/users/#{@user.id}/edit") %>
+
+<hr>
