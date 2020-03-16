@@ -30,3 +30,6 @@
 yarn-debug.log*
 .yarn-integrity
 app/assets/images
+
+# Ignore Spring files.
+/spring/*.pid
