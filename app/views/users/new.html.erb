@@ -5,12 +5,11 @@
 <% end %>
 new
 <h2>新規登録</h2>
-<%= form_for("/") do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.submit "登録" %>
+<%= form_tag("/users/create") do %>
+  <p>ユーザー名</p>
+  <input name="name" value="<%= @user.name %>">
+  <p>メールアドレス</p>
+  <input name="email" value="<%= @user.email %>">
+  <input type="submit" value="新規登録">
 <% end %>
-
 <hr>

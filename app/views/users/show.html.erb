@@ -1,15 +1,14 @@
 テスト show
 
-<% @users.each do |user| %>
   <div class="post-preview">
       <h2 class="post-title">
         <%= @user.name %>
       </h2>
     <p><%= @user.email %></a>
+    <img src="<%= "/user_images/#{@user.image_name}" %>">
   </div>
   <hr>
-<% end %>
 
 <%= link_to("編集", "/users/#{@user.id}/edit") %>
 
-<hr>
+<%= link_to("ユーザー一覧", "/users/index", class: "users-link") %>

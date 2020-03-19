@@ -1,17 +1,23 @@
+<div class="post-preview">
+
+  ユーザー情報の編集
+  <% @user.errors.full_messages.each do |message| %>
+     <div class="formError">
+        <%= message %>
+      </div>
+  <% end %>
+
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+          <p>ユーザー名</p>
+          <input name="name" value="<%= @user.name %>">
+          <p>画像</p>
+          <input name="image" type="file">
+          <p>メールアドレス</p>
+          <input name="email" value="<%= @user.email %>">
+          <input type="submit" value="保存">
+        <% end %>
+
+</div>
 
 
-ユーザー情報の編集</div>
-<% @user.errors.full_messages.each do |message| %>
-   <div class="formError">
-      <%= message %>
-    </div>
-<% end %>
-
-<%= form_for("/users/#{@user.id}/update") do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.submit "登録" %>
-
-<% end %>
+<%= link_to("ユーザー一覧", "/users/index", class: "users-link") %>
