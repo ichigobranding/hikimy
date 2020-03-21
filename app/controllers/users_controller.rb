@@ -12,18 +12,20 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
+def create
     @user = User.new(
       name: params[:name],
       email: params[:email],
-      image_name: "default_user.jpg"
-      )
-      if @user.save
-        flash[:notice] = "登録完了"
-        redirect_to("/users/#{@user.id}")
-      else
-        render("users/new")
-      end
+      image_name: "default_user.jpg",
+      password_digest: params[:password_digest]
+    )
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:notice] = "ユーザー登録が完了しました"
+      redirect_to("/users/#{@user.id}")
+    else
+      render("users/new")
+    end
   end
 
   def edit
@@ -39,14 +41,35 @@ class UsersController < ApplicationController
       image = params[:image]
       File.binwrite("public/user_images/#{@user.image_name}" ,image.read)
     end
-
-
     if @user.save
     flash[:notice] = "ユーザー情報を編集しました"
     redirect_to("/users/#{@user.id}")
     else
     render("users/edit")
     end
+  end
+
+  def login_form
+  end
+
+  def login
+      @user = User.find_by(email: params[:email], password_digest: params[:password_digest])
+     if @user
+      session[:user_id] = @user.id
+      flash[:notice] = "ログインしました"
+      redirect_to("/")
+     else
+      @error_message = " メールアドレスまたはパスワードが間違っています。"
+      @email = params[:email]
+      @password_digest = params[:password_digest]
+      render("users/login_form")
+     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウト"
+    redirect_to("/login")
   end
 
 end

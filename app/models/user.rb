@@ -1,7 +1,6 @@
 class User < ApplicationRecord
-  # # nameカラムに関するバリデーションを作成してください
   validates :name, {presence: true}
-
-  # # emailカラムに関するバリデーションを作成してください
   validates :email, {presence: true, uniqueness: true}
+  # has_secure_password
+  validates :password_digest, presence: true, length: { minimum: 6 }
 end
